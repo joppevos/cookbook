@@ -1,0 +1,13 @@
+# deploy a function with a pubs trigger
+gcloud functions deploy hello_pubsub --runtime python37 --trigger-topic YOUR_TOPIC_NAME
+
+# read the logs
+gcloud functions logs read --limit 50
+
+# remove function
+gcloud functions delete hello_pubsub 
+
+# send message to topic 
+gcloud pubsub topics publish YOUR_TOPIC_NAME --message MESSAGE
+
+
