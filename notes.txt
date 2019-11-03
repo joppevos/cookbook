@@ -17,3 +17,8 @@ gcloud pubsub subscriptions create YOUR_SUBSCRIPTION_NAME \
     --push-endpoint \
     https://YOUR_PROJECT_ID.appspot.com/pubsub/push?token=YOUR_TOKEN \
     --ack-deadline 10
+
+
+
+#Skipping a build trigger
+you can include [skip ci] or [ci skip] in the commit message, and a build will not be triggered.
