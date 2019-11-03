@@ -10,4 +10,10 @@ gcloud functions delete hello_pubsub
 # send message to topic 
 gcloud pubsub topics publish YOUR_TOPIC_NAME --message MESSAGE
 
-
+# create a topic
+gcloud pubsub topics create YOUR_TOPIC_NAME
+gcloud pubsub subscriptions create YOUR_SUBSCRIPTION_NAME \
+    --topic YOUR_TOPIC_NAME \
+    --push-endpoint \
+    https://YOUR_PROJECT_ID.appspot.com/pubsub/push?token=YOUR_TOKEN \
+    --ack-deadline 10
