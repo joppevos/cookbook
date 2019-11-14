@@ -1,5 +1,5 @@
 # deploy a function with a pubs trigger
-gcloud functions deploy hello_pubsub --runtime python37 --trigger-topic YOUR_TOPIC_NAME
+gcloud functions deploy hello_pubsub --runtime python37 --trigger-topic YOUR_TOPIC_NAME --entry-point FUNCTION_NAME
 
 # read the logs
 gcloud functions logs read --limit 50
