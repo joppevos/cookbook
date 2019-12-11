@@ -27,3 +27,9 @@ pubsub subscriptions update SUBSCRIPTION --retain-acked-messages
 # seek pack date format (make sure topic has --retain-acked-messages)
 TS_FORMAT=%Y-%m-%dT%H:%M:%SZ
 pubsub subscriptions seek seek-demo-sub --time=$(date -u -d '-10 min' +$TS_FORMAT)
+
+# credentials for clound run
+gcloud run services add-iam-policy-binding instagram \
+   --member=serviceAccount:data-intergration@mj-marketplaces.iam.gserviceaccount.com \
+   --role=roles/run.invoker
+
