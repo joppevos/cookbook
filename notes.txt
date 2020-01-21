@@ -8,7 +8,6 @@ gcloud functions logs read --limit 50
 gcloud functions delete hello_pubsub 
 
 
-
 #### PUBSUB
 # send message to topic 
 gcloud pubsub topics publish YOUR_TOPIC_NAME --message MESSAGE
@@ -33,3 +32,5 @@ gcloud run services add-iam-policy-binding instagram \
    --member=serviceAccount:data-intergration@mj-marketplaces.iam.gserviceaccount.com \
    --role=roles/run.invoker
 
+# cloud composer (airflow)
+gcloud composer environments create mytest --location=europe-west3 --zone=europe-west3-a --machine-type=c2-standard-4 --python-version=3
