@@ -1,2 +1,4 @@
 # find pid nummer of processes running on port 8080 (kill airflow)
 sudo lsof -t -i:8080
+
+ setxkbmap -option caps:none
