@@ -7,3 +7,5 @@ git config core.sparseCheckout true
 
 echo "some/dir/" >> .git/info/sparse-checkout
 echo "another/sub/tree" >> .git/info/sparse-checkout
+
+git pull origin master
