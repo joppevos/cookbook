@@ -34,3 +34,7 @@ gcloud run services add-iam-policy-binding instagram \
 
 # cloud composer (airflow)
 gcloud composer environments create mytest --location=europe-west3 --zone=europe-west3-a --machine-type=c2-standard-4 --python-version=3
+
+# bigquery latest timestamp
+SELECT *, TIMESTAMP_MILLIS(last_modified_time)
+FROM `staging.__TABLES__` where table_id = 'mj_account'
